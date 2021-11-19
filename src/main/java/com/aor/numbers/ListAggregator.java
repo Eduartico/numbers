@@ -1,5 +1,8 @@
 package com.aor.numbers;
 
+import org.junit.jupiter.api.BeforeEach;
+
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -7,6 +10,11 @@ import java.util.List;
  * into a single integer using various functions.
  */
 public class ListAggregator {
+    public List<Integer> list;
+    @BeforeEach
+    public void helper(List<Integer> list){
+        list = Arrays.asList(1,2,4,2,5);
+    }
     /**
      * Sums all numbers in a list.
      * @return The sum of all the values in the list.
@@ -25,7 +33,7 @@ public class ListAggregator {
      * @return The maximum value in the list.
      */
     public Integer max(List<Integer> list) {
-        int max = 0;
+        int max = Integer.MIN_VALUE;
 
         for (Integer number : list)
             if (number > max)
@@ -58,4 +66,5 @@ public class ListAggregator {
 
         return distinct.size();
     }
+
 }

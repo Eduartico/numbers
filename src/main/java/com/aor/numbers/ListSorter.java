@@ -1,6 +1,9 @@
 package com.aor.numbers;
 
+import org.junit.jupiter.api.BeforeEach;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -8,6 +11,11 @@ import java.util.List;
  * An utility class to sort list of numbers.
  */
 public class ListSorter {
+    public List<Integer> list;
+    @BeforeEach
+    public void helper(List<Integer> list){
+        list = Arrays.asList(1,2,4,2,5);
+    }
     /**
      * Really stupid way to sort a list.
      * @return A sorted version of the list.
