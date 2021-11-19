@@ -13,7 +13,6 @@ public class ListDeduplicatorTest {
     public void helper(List<Integer> list){
         list = Arrays.asList(1,2,4,2,5);
     }
-
     @Test
     public void deduplicate() {
         List<Integer> list = Arrays.asList(1,2,4,2,5);

@@ -10,12 +10,13 @@ import java.util.List;
  * An utility class that removes duplicate numbers
  * from a list.
  */
-public class ListDeduplicator {
+public class ListDeduplicator implements GenericListDeduplicator {
     public List<Integer> list;
     @BeforeEach
     public void helper(List<Integer> list){
         list = Arrays.asList(1,2,4,2,5);
     }
+
 
     /**
      * Removes duplicate numbers from a list.

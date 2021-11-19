@@ -10,11 +10,6 @@ import java.util.List;
  * into a single integer using various functions.
  */
 public class ListAggregator {
-    public List<Integer> list;
-    @BeforeEach
-    public void helper(List<Integer> list){
-        list = Arrays.asList(1,2,4,2,5);
-    }
     /**
      * Sums all numbers in a list.
      * @return The sum of all the values in the list.
@@ -60,11 +55,8 @@ public class ListAggregator {
      * Counts the number of distinct numbers in a list.
      * @return The number of distinct numbers.
      */
-    public int distinct(List<Integer> list) {
-        ListDeduplicator deduplicator = new ListDeduplicator();
+    public int distinct(List<Integer> list, GenericListDeduplicator deduplicator) {
         List<Integer> distinct = deduplicator.deduplicate(list);
-
         return distinct.size();
     }
-
 }
