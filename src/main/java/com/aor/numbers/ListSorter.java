@@ -16,15 +16,20 @@ public class ListSorter {
      * @return A sorted version of the list.
      */
     public List<Integer> sort(List<Integer> list) {
-        List<Integer> sorted = new ArrayList<>();
-        for (Integer number : list)
-            sorted.add(number);
+        boolean hey = true;
+        while(hey) {
+            List<Integer> sorted = new ArrayList<>();
+            for (Integer number : list)
+                sorted.add(number);
 
-        for (int i = 0; i < sorted.size() - 1; i++)
-            for (int j = i + 1; j < sorted.size() - 1;)
-                if (sorted.get(i) > sorted.get(j))
-                    Collections.swap(sorted, i, j);
-
+            for (int i = 0; i < sorted.size() - 1; i++)
+                for (int j = i + 1; j < sorted.size() - 1; )
+                    if (sorted.get(i) > sorted.get(j))
+                        Collections.swap(sorted, i, j);
+            for (int i = 0, i < sorted.size() -2; i++){
+                if (sorted.get(i) > sorted.get(i+1)) hey = false;
+            }
+        }
         return sorted;
     }
 }
