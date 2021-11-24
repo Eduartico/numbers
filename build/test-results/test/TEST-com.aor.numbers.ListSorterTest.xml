@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.numbers.ListSorterTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-11-24T17:01:23" hostname="DESKTOP-A77UFBO" time="0.0">
+<testsuite name="com.aor.numbers.ListSorterTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-11-24T17:05:37" hostname="DESKTOP-A77UFBO" time="0.001">
   <properties/>
-  <testcase name="sort()" classname="com.aor.numbers.ListSorterTest" time="0.0">
+  <testcase name="sort()" classname="com.aor.numbers.ListSorterTest" time="0.001">
     <failure message="org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.util.List&lt;java.lang.Integer&gt; arg0] in method [public void com.aor.numbers.ListSorterTest.helper(java.util.List&lt;java.lang.Integer&gt;)]." type="org.junit.jupiter.api.extension.ParameterResolutionException">org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.util.List&lt;java.lang.Integer&gt; arg0] in method [public void com.aor.numbers.ListSorterTest.helper(java.util.List&lt;java.lang.Integer&gt;)].
 	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameter(ExecutableInvoker.java:200)
 	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameters(ExecutableInvoker.java:183)

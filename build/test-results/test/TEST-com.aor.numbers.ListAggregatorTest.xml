@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.numbers.ListAggregatorTest" tests="6" skipped="0" failures="6" errors="0" timestamp="2021-11-24T17:01:23" hostname="DESKTOP-A77UFBO" time="0.019">
+<testsuite name="com.aor.numbers.ListAggregatorTest" tests="6" skipped="0" failures="6" errors="0" timestamp="2021-11-24T17:05:37" hostname="DESKTOP-A77UFBO" time="0.02">
   <properties/>
-  <testcase name="distinct_bug_8726()" classname="com.aor.numbers.ListAggregatorTest" time="0.012">
+  <testcase name="distinct_bug_8726()" classname="com.aor.numbers.ListAggregatorTest" time="0.013">
     <failure message="org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.util.List&lt;java.lang.Integer&gt; arg0] in method [public void com.aor.numbers.ListAggregatorTest.helper(java.util.List&lt;java.lang.Integer&gt;)]." type="org.junit.jupiter.api.extension.ParameterResolutionException">org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.util.List&lt;java.lang.Integer&gt; arg0] in method [public void com.aor.numbers.ListAggregatorTest.helper(java.util.List&lt;java.lang.Integer&gt;)].
 	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameter(ExecutableInvoker.java:200)
 	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameters(ExecutableInvoker.java:183)
@@ -169,7 +169,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:829)
 </failure>
   </testcase>
-  <testcase name="max()" classname="com.aor.numbers.ListAggregatorTest" time="0.0">
+  <testcase name="max()" classname="com.aor.numbers.ListAggregatorTest" time="0.001">
     <failure message="org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.util.List&lt;java.lang.Integer&gt; arg0] in method [public void com.aor.numbers.ListAggregatorTest.helper(java.util.List&lt;java.lang.Integer&gt;)]." type="org.junit.jupiter.api.extension.ParameterResolutionException">org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.util.List&lt;java.lang.Integer&gt; arg0] in method [public void com.aor.numbers.ListAggregatorTest.helper(java.util.List&lt;java.lang.Integer&gt;)].
 	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameter(ExecutableInvoker.java:200)
 	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameters(ExecutableInvoker.java:183)
@@ -421,7 +421,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:829)
 </failure>
   </testcase>
-  <testcase name="distinct()" classname="com.aor.numbers.ListAggregatorTest" time="0.001">
+  <testcase name="distinct()" classname="com.aor.numbers.ListAggregatorTest" time="0.0">
     <failure message="org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.util.List&lt;java.lang.Integer&gt; arg0] in method [public void com.aor.numbers.ListAggregatorTest.helper(java.util.List&lt;java.lang.Integer&gt;)]." type="org.junit.jupiter.api.extension.ParameterResolutionException">org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.util.List&lt;java.lang.Integer&gt; arg0] in method [public void com.aor.numbers.ListAggregatorTest.helper(java.util.List&lt;java.lang.Integer&gt;)].
 	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameter(ExecutableInvoker.java:200)
 	at org.junit.jupiter.engine.execution.ExecutableInvoker.resolveParameters(ExecutableInvoker.java:183)
