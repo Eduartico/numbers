@@ -2,7 +2,11 @@ package com.aor.numbers;
 
 public class DivisibleByFilter implements GenericListFilter {
      Integer div;
-     void DivisibleByFilter(Integer div){
+
+    public DivisibleByFilter(int i) {
+    }
+
+    void DivisibleByFilter(Integer div){
          this.div = div;
      }
     @Override
