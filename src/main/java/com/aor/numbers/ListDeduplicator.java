@@ -1,7 +1,5 @@
 package com.aor.numbers;
 
-import org.junit.jupiter.api.BeforeEach;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +10,6 @@ import java.util.List;
  */
 public class ListDeduplicator implements GenericListDeduplicator {
     public List<Integer> list;
-    @BeforeEach
     public void helper(List<Integer> list){
         list = Arrays.asList(1,2,4,2,5);
     }
