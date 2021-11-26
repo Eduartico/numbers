@@ -3,39 +3,52 @@ package com.aor.numbers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class ListFiltererTest {
-    public PositiveFilter posfilter = new PositiveFilter();
-    public DivisibleByFilter divfilter = new DivisibleByFilter(2);
-    public List<Integer> list;
-
+    private List<Integer> list;
     @BeforeEach
-    public void helper(List<Integer> list) {
-        this.list = Arrays.asList(1, 2, 4, 2, 5, -1);
+    public void helper(){
+        list = Arrays.asList(1,2,4,-2,7,9,-26,27,30,55,0,-1,-10,3);
+
     }
 
     @Test
-    public void positivefilter() {
-        List<Integer> expected = Arrays.asList(1, 2, 4, 2, 5);
-        List<Integer> filtered = new ArrayList<>();
-        for (Integer i : this.list) {
-            if (this.posfilter.accept(i)) {
-                filtered.add(i);
-            }
-        }
-        Assertions.assertEquals(expected, filtered);
+    public void ListFilterer(){
+        List<Integer> expected = Arrays.asList(1,2,4,-2,7,9,-26,27,30,55,0,-1,-10,3);
+
+        GenericListFilter stubFilter = Mockito.mock(GenericListFilter.class);
+        Mockito.when(stubFilter.accept(Mockito.anyInt())).thenReturn(true);
+
+        ListFilterer filterer = new ListFilterer(stubFilter);
+        List<Integer> nothingFilter = filterer.filter(list);
+
+        Assertions.assertEquals(expected, nothingFilter);
+
     }
 
     @Test
-    public void divfilter() {
-        List<Integer> expected = Arrays.asList(2, 4, 2);
-        ListFilterer qualquermerda = new ListFilterer(divfilter);
-        qualquermerda.filter(list);
-        Assertions.assertEquals(expected, qualquermerda);
+    public void PositiveFilter(){
+        List<Integer> expected = Arrays.asList(1,2,4,7,9,27,30,55,3);
+
+        ListFilterer filterer = new ListFilterer(new PositiveFilter());
+        List<Integer> positives = filterer.filter(list);
+
+        Assertions.assertEquals(expected, positives);
+
+    }
+
+    @Test
+    public void DivisibleByFilter(){
+        List<Integer> expected = Arrays.asList(9,27,30,0,3);
+
+        ListFilterer filterer = new ListFilterer(new DivisibleByFilter(3));
+        List<Integer> divisibleByThree = filterer.filter(list);
+
+        Assertions.assertEquals(expected, divisibleByThree);
+
     }
 }
-
