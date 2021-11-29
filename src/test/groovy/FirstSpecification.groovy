@@ -28,4 +28,13 @@ class FirstSpecification extends Specification {
         thrown(IndexOutOfBoundsException)
         list.size() == 4
     }
+    def "four divided by two should equal 2"(){
+        given:
+        int divs = 2
+        int divd= 4
+        when:
+        int result = divd/divs
+        then:
+        result == 2
+    }
 }
