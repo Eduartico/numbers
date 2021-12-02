@@ -1,3 +1,7 @@
+import com.aor.numbers.GenericListDeduplicator
+import com.aor.numbers.ListAggregator
+import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Test
 import spock.lang.Specification
 
 class FirstSpecification extends Specification {
@@ -36,5 +40,27 @@ class FirstSpecification extends Specification {
         int result = divd/divs
         then:
         result == 2
+    }
+    def "numbers to the power of two"(int a, int b, int c) {
+        expect:
+        Math.pow(a, b) == c
+        where:
+        a | b | c
+        1 | 2 | 1
+        2 | 2 | 4
+        3 | 2 | 9
+    }
+    def "distinct_bug_8726"(){
+        given:
+        List<Integer> distinctBug = Arrays.asList(1, 2, 4, 2)
+        ListAggregator aggregator = new ListAggregator()
+        GenericListDeduplicator deduplicator = Mock(GenericListDeduplicator)
+        deduplicator.deduplicate(distinctBug) >> Arrays.asList(1, 2, 4)
+
+        when:
+        int distinct = aggregator.distinct(distinctBug, deduplicator);
+
+        then:
+        distinct == 3
     }
 }
