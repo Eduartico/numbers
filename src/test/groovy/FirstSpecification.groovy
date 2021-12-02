@@ -50,17 +50,4 @@ class FirstSpecification extends Specification {
         2 | 2 | 4
         3 | 2 | 9
     }
-    def "distinct_bug_8726"(){
-        given:
-        List<Integer> distinctBug = Arrays.asList(1, 2, 4, 2)
-        ListAggregator aggregator = new ListAggregator()
-        GenericListDeduplicator deduplicator = Mock(GenericListDeduplicator)
-        deduplicator.deduplicate(distinctBug) >> Arrays.asList(1, 2, 4)
-
-        when:
-        int distinct = aggregator.distinct(distinctBug, deduplicator);
-
-        then:
-        distinct == 3
-    }
 }
